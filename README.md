@@ -5,11 +5,14 @@ Autonomous drone-based precision agriculture system using Pixhawk 2.4.8 and Rasp
 This project presents an autonomous precision agriculture system that integrates a drone platform with machine learning and embedded systems to detect weeds and plant diseases in crop fields.
 The system uses a Pixhawk 2.4.8 flight controller for autonomous navigation and a Raspberry Pi 3B+ for onboard image processing and inference.
 **System Architecture**
+
 The overall system architecture consists of four main components:
 **Autonomous Drone Platform**
+
 Pixhawk 2.4.8 handles flight control and waypoint-based navigation.
 The drone autonomously captures images of crops during flight.
 **Onboard Processing Unit**
+
 Raspberry Pi 3B+ is mounted on the drone.
 It captures images from the camera and runs the trained machine learning models.
 MobileNetV2 performs real-time weed and plant classification.
@@ -19,9 +22,11 @@ The Raspberry Pi and laptop are connected via a local network.
 SMBD (Samba) protocol is used to share captured images from the drone to the laptop.
 This enables real-time or near real-time visualization of images and results on the PC during drone operation.
 **Ground Station (Laptop/PC)**
+
 Used for monitoring captured images and inference outputs.
 Supports model evaluation, debugging, and result visualization.
 **Data Flow:**
+
 Drone Camera → Raspberry Pi (Inference) → SMBD File Sharing → Laptop Visualization
 
 **Machine Learning Models**
